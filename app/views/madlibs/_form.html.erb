@@ -1,0 +1,17 @@
+<%= form_for @madlib, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="row">
+    <div class="instructions span5">
+      <h3>Insert Text:</h3>
+    </div>
+    <div class="span6">
+      <%= f.label :text, :class => 'control-label' %>
+      <%= f.text_area :text, :class => 'text_area' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit 'Create', :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                madlibs_path, :class => 'btn' %>
+  </div>
+<% end %>

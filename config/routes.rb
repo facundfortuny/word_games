@@ -1,5 +1,12 @@
 Madlibs::Application.routes.draw do
 
+
+  root :to => "madlibs#new"
+
+  resources :madlibs do 
+    resources :solutions
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
